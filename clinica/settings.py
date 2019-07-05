@@ -27,10 +27,14 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+# Login
+LOGIN_REDIRECT_URL = '/atendimento/'
+LOGOUT_REDIRECT_URL = '/accounts/login/'
 
 # Application definition
 
 INSTALLED_APPS = [
+    'atendimento.apps.AtendimentoConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -55,6 +59,7 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
