@@ -1,4 +1,4 @@
-{% extends "base.html" %} {% block daniela %} 
+{% extends "base.html" %} {% block daniela %}
 <div class="row">
     <!-- column -->
     <div class="col-lg-12">
@@ -17,12 +17,20 @@
                             </tr>
                         </thead>
                         <tbody>
+
                             <tr>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                                <td>{{cliente.name}}</td>
+                                <td>{{cliente.birth_date}}</td>
+                                <td>{{cliente.cpf}}</td>
+                                <td>{{cliente.sexo}}</td>
+                                <td>
+                                    <button type="button" class="btn btn-success" href="/atendimento/cliente/">Detalhes</button>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn btn-danger" href="/atendimento/cliente/">Excluir</button>
+                                </td>
                             </tr>
+
                         </tbody>
                     </table>
                 </div>
