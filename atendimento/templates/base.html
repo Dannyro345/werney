@@ -11,7 +11,7 @@
     <meta name="author" content="">
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="{% static 'images/favicon.png' %}">
-    <title>Material Pro Admin Template - The Most Complete & Trusted Bootstrap 4 Admin Template</title>
+    <title>Clinica</title>
     <!-- Bootstrap Core CSS -->
     <link href="{% static 'assets/plugins/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
     <!-- Custom CSS -->
@@ -116,7 +116,7 @@
                 <!-- Sidebar navigation-->
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav">
-                        <li> <a class="waves-effect waves-dark" href="/atendimento/home/" aria-expanded="false"><i
+                        <li> <a class="waves-effect waves-dark" href="/atendimento/" aria-expanded="false"><i
                                     class="mdi mdi-gauge"></i><span class="hide-menu">Home</span></a>
                         </li>
                         <li> <a class="waves-effect waves-dark" href="/atendimento/user/" aria-expanded="false"><i
@@ -154,11 +154,7 @@
                 <!-- ============================================================== -->
                 <div class="row page-titles">
                     <div class="col-md-5 col-8 align-self-center">
-                        <h3 class="text-themecolor m-b-0 m-t-0">Dashboard</h3>
-                        <ol class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="javascript:void(0)">Home</a></li>
-                            <li class="breadcrumb-item active">Dashboard</li>
-                        </ol>
+                        <h3 class="text-themecolor m-b-0 m-t-0">Clinica</h3>
                     </div>
                     <div class="col-md-7 col-4 align-self-center">
                         <a href="https://wrappixel.com/templates/materialpro/"
@@ -180,15 +176,7 @@
                 <!-- ============================================================== -->
                 <!-- Start Page Content -->
                 <!-- ============================================================== -->
-                <div class="row">
-                    <div class="col-12">
-                        <div class="card">
-                            <div class="card-block">
-                                This is some text within a card block.
-                            </div>
-                        </div>
-                    </div>
-                </div>
+
                 <!-- ============================================================== -->
                 <!-- End PAge Content -->
                 <!-- ============================================================== -->
@@ -209,7 +197,14 @@
             </div>
 
             <footer class="footer">
-                © 2017 Material Pro Admin by wrappixel.com
+                {% if messages %}
+                <ul class="messages">
+                    {% for message in messages %}
+                    <li{% if message.tags %} class="{{ message.tags }}" {% endif %}>{{ message }}</li>
+                        {% endfor %}
+                </ul>
+                {% endif %}
+                © 2019 Material Pro Admin by Daniela Coelho Rodrigues.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
